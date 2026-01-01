@@ -7,81 +7,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">About Me</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Lance Mirano</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">Aboout</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/kana2.jpg" alt="Lance Mirano profile picture" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Lance Mirano</h1>
-            <p class="section__text__p2">Computer Science Student</p>
 
+<section id="profile">
+    <div class="section__pic-container">
+        <img src="./assets/profile.png" alt="Lance Mirano profile picture" />
+    </div>
+    <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Lance Mirano</h1>
+        <p class="section__text__p2">Full Stack Developer</p>
+    </div>
+</section> 
 
-            </div>
-        </div>
+<section id="about">
+    <h1 class="title">Languages and Tools</h1>
+    <p class="section__text__p1">I've used</p>
 
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/lance.png" alt="Profile picture" class="about-pic" />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/flag.jpg" alt="Experience icon" class="icon" />
-                        <h3>Background</h3>
-                        <p> Born on October 8, 2004 and raised in the Philippines.</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/cap.png" alt="Experience icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>Currently studying<br>Computer Programming<br>in Canada.</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/controller.png" alt="Experience icon" class="icon" />
-                        <h3>Hobbies</h3>
-                        <p>Lifting Weights<br>Playing Games<br>Watching Anime<br>Reading Manga</p>
+    <div class="section-container">
+        <div class="about-details-container">
+            <div class="about-widgets">
+                <!-- Widget 1 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/javascript.jpg" alt="JavaScript logo" class="widget-logo">
+                        <span class="widget-name">JavaScript</span>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>My interest in computers began when my father brought home a computer and let me to play on it. Since then, I have enjoyed sitting in front of the computer and playing games. I primarily play League of Legends and Counter-Strike.</p>
+
+                <!-- Widget 2 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/C-Sharp.png" alt="C-Sharp logo" class="widget-logo">
+                        <span class="widget-name">C#</span>
+                    </div>
+                </div>
+
+                <!-- Widget 3 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Java.png" alt="Java logo" class="widget-logo">
+                        <span class="widget-name">Java</span>
+                    </div>
+                </div>
+
+                <!-- Widget 4 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Python.png" alt="Python logo" class="widget-logo">
+                        <span class="widget-name">Python</span>
+                    </div>
+                </div>
+
+                <!-- Widget 5 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Flutter.png" alt="Flutter logo" class="widget-logo">
+                        <span class="widget-name">Flutter</span>
+                    </div>
+                </div>
+
+                <!-- Widget 6 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/SQL-Developer.png" alt="SQL-Developer" class="widget-logo">
+                        <span class="widget-name">SQL Developer</span>
+                    </div>
+                </div>
+
+                <!-- Widget 7 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/MySQL.png" alt="MySQL" class="widget-logo">
+                        <span class="widget-name">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Widget 8 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/MongoDB.png" alt="MongoDB" class="widget-logo">
+                        <span class="widget-name">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Widget 9 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Firebase.png" alt="Firebase logo" class="widget-logo">
+                        <span class="widget-name">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Widget 10 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Git.png" alt="Git logo" class="widget-logo">
+                        <span class="widget-name">Git</span>
+                    </div>
+                </div>
+                
+                <!-- Widget 11 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/GitHub.png" alt="GitHub logo" class="widget-logo">
+                        <span class="widget-name">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Widget 12 -->
+                <div class="widget-card">
+                    <div class="widget-header">
+                        <img src="./assets/Postman.png" alt="Postman" class="widget-logo">
+                        <span class="widget-name">Postman</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+</section>
+
+
+
 
     <script src="script.js"></script>
 </body>
