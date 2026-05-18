@@ -1,141 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Lance Mirano</title>
+    <meta name="description" content="Minimal portfolio layout inspired by the provided profile screenshot." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-
-<section id="profile">
-    <div class="section__pic-container">
-        <img src="./assets/profile.png" alt="Lance Mirano profile picture" />
-    </div>
-    <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Lance Mirano</h1>
-        <p class="section__text__p1">Full Stack Developer</p>
-    </div>
-</section> 
-
-<section id="about">
-    <h1 class="title">Languages and Tools</h1>
-
-    <div class="section-container">
-        <div class="about-details-container">
-            <div class="about-widgets">
-                <!-- Widget 1 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/javascript.jpg" alt="JavaScript logo" class="widget-logo">
-                        <span class="widget-name">JavaScript</span>
-                    </div>
-                </div>
-
-                <!-- Widget 2 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/C-Sharp.png" alt="C-Sharp logo" class="widget-logo">
-                        <span class="widget-name">C#</span>
-                    </div>
-                </div>
-
-                <!-- Widget 3 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Java.png" alt="Java logo" class="widget-logo">
-                        <span class="widget-name">Java</span>
-                    </div>
-                </div>
-
-                <!-- Widget 4 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Python.png" alt="Python logo" class="widget-logo">
-                        <span class="widget-name">Python</span>
-                    </div>
-                </div>
-
-                <!-- Widget 5 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Flutter.png" alt="Flutter logo" class="widget-logo">
-                        <span class="widget-name">Flutter</span>
-                    </div>
-                </div>
-
-                <!-- Widget 6 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/SQL-Developer.png" alt="SQL-Developer" class="widget-logo">
-                        <span class="widget-name">SQL Developer</span>
-                    </div>
-                </div>
-
-                <!-- Widget 7 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/MySQL.png" alt="MySQL" class="widget-logo">
-                        <span class="widget-name">MySQL</span>
-                    </div>
-                </div>
-
-                <!-- Widget 8 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/MongoDB.png" alt="MongoDB" class="widget-logo">
-                        <span class="widget-name">MongoDB</span>
-                    </div>
-                </div>
-
-                <!-- Widget 9 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Firebase.png" alt="Firebase logo" class="widget-logo">
-                        <span class="widget-name">Firebase</span>
-                    </div>
-                </div>
-
-                <!-- Widget 10 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Git.png" alt="Git logo" class="widget-logo">
-                        <span class="widget-name">Git</span>
-                    </div>
-                </div>
-                
-                <!-- Widget 11 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/GitHub.png" alt="GitHub logo" class="widget-logo">
-                        <span class="widget-name">GitHub</span>
-                    </div>
-                </div>
-
-                <!-- Widget 12 -->
-                <div class="widget-card">
-                    <div class="widget-header">
-                        <img src="./assets/Postman.png" alt="Postman" class="widget-logo">
-                        <span class="widget-name">Postman</span>
-                    </div>
-                </div>
+    <main class="page">
+        <section class="profile-block">
+            <div class="profile-image-wrap">
+                <img src="./assets/profile.webp" alt="Profile image" class="profile-image" />
             </div>
-        </div>
-    </div>
 
-</section>
-
-<section id="info">
-    
-</section>
+            <div class="profile-meta">
+                <div class="name-line">
+                    <h1>Lance</h1>
+                    <span class="caret"></span>
+                </div>
 
 
+            </div>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="about-snippet" id="about">
+            <p class="slashes">//</p>
+            <p class="about-copy">I am currently taking my Diploma in Computer Programming at Red Deer Polytechnic.
+                Currently learning Full Stack C#, Java and JavaScript.
+
+                I am eager to contribute to a team while gaining hands-on experience in a project environment, where I
+                can collaborate with others and tackle real-world challenges, and use these opportunities to build and
+                shape my skills.
+
+                I'm always looking to broaden my knowledge and embrace new technologies.</p>
+        </section>
+
+        <section class="moon-post">
+            <div class="moon-media-row">
+                <img src="./assets/moon.gif" alt="Moon animation" class="moon-gif" />
+
+            </div>
+            <p class="moon-title">月がきれい</p>
+
+        </section>
+
+
+    </main>
 </body>
 
 </html>
