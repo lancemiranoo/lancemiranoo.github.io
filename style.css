@@ -371,11 +371,11 @@ img {
     padding: 0 4px;
 }
 
-.moon-title {
-    font-size: 0.9rem;
+/* .moon-title {
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
-}
+} */
 
 .moon-subtitle {
     font-size: 0.9rem;
