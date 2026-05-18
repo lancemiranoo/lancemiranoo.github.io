@@ -1,5 +1,31 @@
+/* ==========================================================================
+   CSS CUSTOM VARIABLES (DESIGN SYSTEM)
+   ========================================================================== */
+:root {
+    /* Brand Accent Theme Color (Unified LinkedIn Corporate Blue) */
+    --accent-color: #0a66c2;         /* Unifies primary buttons, badges, and active links */
+    --accent-hover: #004182;         /* Perfect darker blue shade for interactive hover states */
+    --accent-shadow-rgb: 10, 102, 194; /* RGB equivalent for transparent drop shadows */
+    
+    /* Text Color Tokens */
+    --text-primary: #0f172a;         /* High-contrast slate-900 for bold headers and name */
+    --text-secondary: #334155;       /* Slate-700 for highly readable paragraph bodies */
+    --text-muted: #64748b;           /* Slate-500 for locations, subtitles, and gray icons */
+    
+    /* UI Elements & Canvas Colors */
+    --bg-page: #ffffff;              /* Page baseline canvas background */
+    --bg-hover-secondary: #f8fafc;   /* Subtle background fill for secondary outline hovers */
+    --border-color: #e2e8f0;         /* Slate-200 for clean borders on buttons/cards */
+    --border-hover: #cbd5e1;         /* Slate-300 highlighting hovered borders */
+}
+
+/* ==========================================================================
+   RESET & SYSTEM BASE
+   ========================================================================== */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -7,267 +33,392 @@ html {
 }
 
 body {
-    margin: 0;
-    min-width: 320px;
-    background: #000000;
-    color: #f2f2f2;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Headings & Links */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 700;
 }
 
 a {
-    color: #6e6e6e;
+    color: inherit;
     text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
-h1,
-h2,
-p {
-    margin: 0;
-}
-
+/* ==========================================================================
+   LAYOUT CONTAINER
+   ========================================================================== */
 .page {
-    width: min(calc(100% - 36px), 620px);
-    margin: 24px auto 48px;
+    width: min(calc(100% - 48px), 800px);
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px; /* Perfect vertical rhythm */
 }
 
+/* ==========================================================================
+   PROFILE HEADER BLOCK
+   ========================================================================== */
 .profile-block {
     display: grid;
-    grid-template-columns: 170px 1fr;
-    gap: 36px;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
     align-items: start;
 }
 
+/* Profile Image */
 .profile-image-wrap {
-    width: 170px;
-    border: 1px solid #76bce4;
-    padding: 1px;
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 16px -6px rgba(15, 23, 42, 0.04);
+    background-color: #f1f5f9;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-image-wrap:hover {
+    transform: scale(1.03); /* Subtle interactive pop */
 }
 
 .profile-image {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 100%;
     object-fit: cover;
-    filter: grayscale(1);
 }
 
+/* Profile Metadata */
 .profile-meta {
-    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
 }
 
 .name-line {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-bottom: 10px;
+    gap: 8px;
 }
 
 .name-line h1 {
-    font-size: 2.8rem;
-    font-weight: 400;
-    line-height: 1;
-}
-
-.caret {
-    width: 0;
-    height: 0;
-    margin-top: 6px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid #f2f2f2;
-}
-
-.meta-line {
-    margin-bottom: 18px;
-    color: #c9c9c9;
-    font-size: 1.35rem;
-}
-
-.link-list {
-    display: grid;
-    gap: 8px;
-    margin-bottom: 42px;
-}
-
-.link-list p,
-.more-link,
-.about-copy,
-.moon-title,
-.moon-comments,
-.guide-created,
-.guide-platform,
-.guide-rating {
-    font-size: 1rem;
-}
-
-.link-list span {
-    color: #f0f0f0;
-    font-weight: 600;
-}
-
-.link-list a {
-    margin-left: 4px;
-}
-
-.more-link {
-    display: inline-block;
-    color: #f0f0f0;
+    font-size: 2.25rem;
     font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
 }
 
-.about-snippet {
-    margin-top: 46px;
+.verified-badge {
+    margin-top: 3px;
+    flex-shrink: 0;
 }
 
-.slashes {
-    margin-bottom: 64px;
-    font-size: 2.2rem;
+/* Location */
+.location-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.location-icon {
+    color: var(--text-muted);
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+/* Roles Row */
+.roles-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    width: 100%;
+    gap: 16px;
+}
+
+.roles-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: -0.015em;
+    line-height: 1.4;
+}
+
+.separator {
+    color: var(--border-hover);
     font-weight: 300;
+    margin: 0 6px;
 }
 
-.about-copy {
-    color: #efefef;
+/* Trophy Badge Button */
+.trophy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.trophy-btn:hover {
+    background-color: var(--bg-hover-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+}
+
+.trophy-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   BUTTONS SYSTEM
+   ========================================================================== */
+.actions-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
     font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.moon-post {
-    margin-top: 48px;
+/* Primary Accent Button (Consistent Color styling) */
+.btn-primary {
+    background-color: #ffffff;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-.moon-media-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 101px;
-    gap: 10px;
-    align-items: start;
+.btn-primary:hover {
+    background-color: var(--bg-hover-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.chevron-icon {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 2px;
+}
+
+.btn-primary:hover .chevron-icon {
+    transform: translateX(3px); /* Interactive Micro-animation */
+}
+
+/* Secondary Outline Button */
+.btn-secondary {
+    background-color: #ffffff;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-hover-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    flex-shrink: 0;
+    color: currentColor;
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+.about-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary); /* Extremely legible color contrast */
+}
+
+/* ==========================================================================
+   FEATURED POST CARD (MOON CARD)
+   ========================================================================== */
+.featured-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.moon-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.moon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--border-hover);
+}
+
+.moon-gif-wrap {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bg-hover-secondary);
 }
 
 .moon-gif {
     width: 100%;
-    height: 254px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.counter-box {
+.moon-card:hover .moon-gif {
+    transform: scale(1.025); /* Elegant picture zoom */
+}
+
+.moon-info-row {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 56px;
-    background: #2d2d2d;
-    color: #f0f0f0;
-    font-size: 2rem;
-    font-weight: 700;
+    margin-top: 16px;
+    padding: 0 4px;
 }
 
 .moon-title {
-    margin-top: 8px;
-    color: #bfbfbf;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
-.moon-comments {
-    margin-top: 4px;
-    color: #9d9d9d;
-}
-
-.moon-comments::before {
-    content: "\1F5E8  ";
-}
-
-.guide-block {
-    margin-top: 54px;
-}
-
-.guide-block h2 {
-    margin-bottom: 36px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.guide-card {
-    display: grid;
-    grid-template-columns: 158px 1fr auto;
-    gap: 14px;
-    align-items: center;
-}
-
-.guide-thumb {
-    width: 158px;
-    height: 118px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.guide-info {
-    display: grid;
-    gap: 12px;
-}
-
-.guide-created {
-    color: #9d9d9d;
-}
-
-.guide-created strong {
-    color: #f3f3f3;
+.moon-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
     font-style: italic;
 }
 
-.guide-platform {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #d9d9d9;
-}
-
-.platform-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 4px;
-    background: linear-gradient(180deg, #d7d7d7, #8d8d8d);
-}
-
-.guide-rating {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #9c9c9c;
-    white-space: nowrap;
-}
-
-.stars {
-    color: #93d53e;
-    letter-spacing: 1px;
-}
-
-@media (max-width: 700px) {
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
     .page {
-        width: min(calc(100% - 24px), 100%);
-        margin-top: 16px;
+        margin: 40px auto;
+        gap: 40px;
     }
 
-    .profile-block,
-    .moon-media-row,
-    .guide-card {
-        grid-template-columns: 1fr;
+    .profile-block {
+        grid-template-columns: 1fr; /* Single column stacking on mobile */
+        gap: 28px;
     }
 
-    .profile-image-wrap,
-    .guide-thumb {
-        width: 100%;
-        max-width: 220px;
+    .profile-image-wrap {
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
     }
 
-    .profile-meta {
-        padding-top: 0;
+    .name-line h1 {
+        font-size: 1.85rem;
     }
 
-    .counter-box {
-        width: 101px;
+    .roles-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        gap: 12px;
     }
 
-    .guide-rating {
-        justify-content: flex-start;
+    .roles-text {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .trophy-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .actions-row {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 9px 16px;
+        font-size: 0.9rem;
+        flex-grow: 1; /* Smart expansion on mobile for perfect stacking grid */
+    }
+
+    .moon-gif-wrap {
+        height: 200px; /* Scaled down for mobile viewports */
     }
 }

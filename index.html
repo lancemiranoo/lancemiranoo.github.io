@@ -5,53 +5,158 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lance Mirano</title>
-    <meta name="description" content="Minimal portfolio layout inspired by the provided profile screenshot." />
+    <title>Lance Mirano — Software Developer & Programmer</title>
+    <meta name="description"
+        content="Personal portfolio of Lance Mirano, a software developer studying Computer Programming at Red Deer Polytechnic." />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lance Mirano — Software Developer" />
+    <meta property="og:description"
+        content="Personal portfolio of Lance Mirano, a software developer studying Computer Programming at Red Deer Polytechnic." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/profile.webp" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <main class="page">
+        <!-- Profile Header Block -->
         <section class="profile-block">
             <div class="profile-image-wrap">
-                <img src="./assets/profile.webp" alt="Profile image" class="profile-image" />
+                <img src="./assets/profile.webp" alt="Lance Mirano" class="profile-image" />
             </div>
 
             <div class="profile-meta">
+                <!-- Name and Verified Badge -->
                 <div class="name-line">
-                    <h1>Lance</h1>
-                    <span class="caret"></span>
+                    <h1>Lance Mirano</h1>
+                    <!-- Verified Badge SVG -->
+                    <!-- <svg class="verified-badge" viewBox="0 0 24 24" width="22" height="22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-label="Verified Profile">
+                        <circle cx="12" cy="12" r="10" fill="#1d9bf0" />
+                        <path d="M8.5 12.5L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg> -->
                 </div>
 
+                <!-- Location Line -->
+                <div class="location-line">
+                    <!-- Location Pin SVG -->
+                    <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
+                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Edmonton, Alberta, Canada</span>
+                </div>
 
+                <!-- Roles & Trophy Badge Row -->
+                <div class="roles-row">
+                    <p class="roles-text">
+                        Software Developer <span class="separator">\</span> Student <span class="separator">\</span>
+                        Tech Enthusiast
+                    </p>
+                    <!-- Trophy Achievement Badge -->
+                    <!-- <a href="https://github.com/lancemiranoo" class="trophy-btn" target="_blank"
+                        rel="noopener noreferrer" title="View GitHub Achievements"> -->
+                    <!-- Trophy SVG -->
+                    <!-- <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
+                            <path d="M12 2a6 6 0 0 1 6 6v1H6V8a6 6 0 0 1 6-6z"></path>
+                        </svg>
+                    </a> -->
+                </div>
+
+                <!-- Interactive Action Buttons -->
+                <div class="actions-row">
+                    <!-- LinkedIn Profile (Primary Black Button) -->
+                    <a href="https://www.linkedin.com/in/lance-mirano/" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer">
+                        <!-- LinkedIn SVG -->
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <span>LinkedIn</span>
+                        <!-- Right Chevron SVG -->
+                        <!-- <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg> -->
+                    </a>
+
+                    <!-- Send Email (Secondary White Button) -->
+                    <a href="mailto:lancemiranoo@gmail.com" class="btn btn-secondary">
+                        <!-- Envelope SVG -->
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Send Email</span>
+                    </a>
+
+                    <!-- GitHub Profile (Secondary White Button) -->
+                    <a href="https://github.com/lancemiranoo" class="btn btn-secondary" target="_blank"
+                        rel="noopener noreferrer">
+                        <!-- GitHub SVG -->
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="about-snippet" id="about">
-            <p class="slashes">//</p>
-            <p class="about-copy">I am currently taking my Diploma in Computer Programming at Red Deer Polytechnic.
-                Currently learning Full Stack C#, Java and JavaScript.
-
-                I am eager to contribute to a team while gaining hands-on experience in a project environment, where I
-                can collaborate with others and tackle real-world challenges, and use these opportunities to build and
-                shape my skills.
-
-                I'm always looking to broaden my knowledge and embrace new technologies.</p>
-        </section>
-
-        <section class="moon-post">
-            <div class="moon-media-row">
-                <img src="./assets/moon.gif" alt="Moon animation" class="moon-gif" />
-
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <p class="moon-title">月がきれい</p>
-
         </section>
 
-
+        <!-- Featured / Spotlight Spotlight Card -->
+        <section class="featured-section">
+            <div class="moon-card">
+                <div class="moon-gif-wrap">
+                    <img src="./assets/moon.gif" alt="Moon animation" class="moon-gif" />
+                </div>
+                <div class="moon-info-row">
+                    <p class="moon-title">月がきれい</p>
+                    <p class="moon-subtitle">"The moon is beautiful"</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
