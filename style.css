@@ -494,6 +494,8 @@ html.skip-loading .loading-screen {
 .chip-grid span {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
+    gap: 8px;
     min-height: 34px;
     padding: 0 10px;
     border: 1px solid rgba(244, 239, 230, 0.22);
