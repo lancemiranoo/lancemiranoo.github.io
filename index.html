@@ -3,174 +3,259 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lance Mirano — Software Developer & Programmer</title>
+    <title>Lance Mirano | Software Developer</title>
     <meta name="description"
-        content="Personal portfolio of Lance Mirano, a software developer studying Computer Programming at Red Deer Polytechnic." />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Lance Mirano — Software Developer" />
-    <meta property="og:description"
-        content="Personal portfolio of Lance Mirano, a software developer studying Computer Programming at Red Deer Polytechnic." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/you.jpg" />
-
-    <!-- Website Icon (Favicon) -->
-    <link rel="icon" type="image/jpeg" href="./assets/profile.jpeg" />
-
-    <!-- Google Fonts -->
+        content="Portfolio of Lance Mirano, a software developer focused on thoughtful full-stack products and AI exploration." />
+    <script>
+        if (new URLSearchParams(window.location.search).get("returning") === "experience") {
+            document.documentElement.classList.add("skip-loading", "returning-from-history");
+        }
+    </script>
+    <link rel="icon" type="image/jpeg" href="./assets/you.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet" />
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
-    <main class="page">
-        <!-- Profile Header Block -->
-        <section class="profile-block">
-            <div class="profile-image-wrap">
-                <img src="./assets/you.jpg" alt="Lance Mirano" class="profile-image" />
+<body class="is-loading">
+    <div class="loading-screen" role="status" aria-live="polite" aria-label="Loading portfolio">
+        <div class="loading-image-frame" aria-hidden="true"></div>
+        <div class="loading-content">
+            <div class="loading-status">
+                <p class="loading-index">Lance Mirano / Portfolio</p>
+                <span class="loading-percent" aria-hidden="true">0%</span>
+            </div>
+            <strong>Loading the night sky</strong>
+            <div class="loading-track" aria-hidden="true"><span></span></div>
+        </div>
+    </div>
+
+    <main id="home">
+        <nav class="scrolled-nav" aria-label="Scrolled portfolio navigation">
+            <a class="scrolled-nav-brand" href="#home">Lance Mirano</a>
+            <div class="scrolled-nav-links">
+                <a href="#about">01. About</a>
+                <a href="#experience">02. Experience</a>
+                <a href="#stack">03. Stack</a>
+                <a href="#projects">04. Projects</a>
+                <a href="#photos">05. Photos</a>
+            </div>
+        </nav>
+
+        <header class="masthead">
+            <div class="utility-row">
+                <p class="datestamp" id="date-stamp"></p>
+                <p class="utility-index">PORTFOLIO / 001</p>
             </div>
 
-            <div class="profile-meta">
-                <!-- Name and Verified Badge -->
-                <div class="name-line">
+            <div class="rule-stack" aria-hidden="true">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="identity-row">
+                <a class="portrait-frame" href="#home" aria-label="Go to the top of the portfolio">
+                    <img src="./assets/profile 2.jpeg" alt="Portrait of Lance Mirano" class="portrait" />
+                </a>
+
+                <div class="identity-copy">
+                    <p class="identity-kicker">Edmonton, Canada</p>
                     <h1>Lance Mirano</h1>
-                    <!-- Verified Badge SVG -->
-                    <!-- <svg class="verified-badge" viewBox="0 0 24 24" width="22" height="22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-label="Verified Profile">
-                        <circle cx="12" cy="12" r="10" fill="#1d9bf0" />
-                        <path d="M8.5 12.5L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg> -->
+                    <p class="role-line">Software Developer</p>
+                    <nav class="section-nav" aria-label="Masthead portfolio navigation">
+                        <a href="#about">01. About</a>
+                        <a href="#experience">02. Experience</a>
+                        <a href="#stack">03. Tech Stack</a>
+                        <a href="#projects">04. Projects</a>
+                        <a href="#photos">05. Photos</a>
+                    </nav>
                 </div>
+            </div>
+        </header>
 
-                <!-- Location Line -->
-                <div class="location-line">
-                    <!-- Location Pin SVG -->
-                    <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
-                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span>Edmonton, Alberta, Canada</span>
-                </div>
+        <section class="content-section biography-section" id="about" aria-labelledby="about-title">
+            <div class="section-heading section-heading-row">
+                <h3 id="about-title">[ 01 // Biography ]</h3>
+                <span class="section-link">About</span>
+            </div>
 
-                <!-- Roles & Trophy Badge Row -->
-                <div class="roles-row">
-                    <p class="roles-text">
-                        Software Developer <span class="separator">\</span> Student <span class="separator">\</span>
-                        Tech Enthusiast
-                    </p>
-                    <!-- Trophy Achievement Badge -->
-                    <!-- <a href="https://github.com/lancemiranoo" class="trophy-btn" target="_blank"
-                        rel="noopener noreferrer" title="View GitHub Achievements"> -->
-                    <!-- Trophy SVG -->
-                    <!-- <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                            <path d="M4 22h16"></path>
-                            <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
-                            <path d="M12 2a6 6 0 0 1 6 6v1H6V8a6 6 0 0 1 6-6z"></path>
-                        </svg>
-                    </a> -->
-                </div>
-
-                <!-- Interactive Action Buttons -->
-                <div class="actions-row">
-                    <!-- LinkedIn Profile (Primary Black Button) -->
-                    <a href="https://www.linkedin.com/in/lance-mirano/" class="btn btn-primary" target="_blank"
-                        rel="noopener noreferrer">
-                        <!-- LinkedIn SVG -->
-                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        <span>LinkedIn</span>
-                        <!-- Right Chevron SVG -->
-                        <!-- <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor"
-                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg> -->
-                    </a>
-
-                    <!-- Send Email (Secondary White Button) -->
-                    <a href="mailto:lancemiranoo@gmail.com" class="btn btn-secondary">
-                        <!-- Envelope SVG -->
-                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>Send Email</span>
-                    </a>
-
-                    <!-- GitHub Profile (Secondary White Button) -->
-                    <a href="https://github.com/lancemiranoo" class="btn btn-secondary" target="_blank"
-                        rel="noopener noreferrer">
-                        <!-- GitHub SVG -->
-                        <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                </div>
+            <div class="biography-copy placeholder-copy">
+                <p>I'm a full stack software developer, building web and mobile applications.</p>
+                <p>In my free time I enjoy exploring AI technologies, and playing strategy games.</p>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>I’m Lance, a passionate full-stack developer. My technical background includes
-                    building RESTful APIs, implementing authentication systems, developing ETL processes and creating
-                    interactive dashboards with real-time data visualization.
-                </p>
-                <p>
-                    Currently, I’m highly interested in AI automation and the growing impact of artificial intelligence
-                    in modern software development. This interest has motivated me to learn more about AI integrations,
-                    intelligent
-                    automation tools, and data-driven application design.
-                </p>
-                <p>
-                    Outside of development, I continuously explore new technologies, improve my technical skills, and
-                    work on projects that challenge me to grow as a developer. My goal is to continue evolving as a
-                    software
-                    developer while expanding my expertise in AI automation, modern application development, and
-                    emerging technologies.</p>
+        <section class="split-section" aria-label="Experience and technology stack">
+            <section class="content-section timeline-section" id="experience" aria-labelledby="experience-title">
+                <div class="section-heading section-heading-row">
+                    <h3 id="experience-title">[ 02 // Experience ]</h3>
+                    <a class="section-link" href="./experience.html">Full history <span
+                            aria-hidden="true">&#8250;</span></a>
+                </div>
+
+                <div class="timeline-list">
+                    <article class="timeline-item">
+                        <p class="timeline-year">2025</p>
+                        <div>
+                            <h4>Applied Research Technician</h4>
+                            <p>Red Deer Polytechnic</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-year">2024</p>
+                        <div>
+                            <h4>Red Deer Polytechnic</h4>
+                            <p>Computer Programming</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-year">2021</p>
+                        <div>
+                            <h4>Southern Philippines Institute of Science & Technology</h4>
+                            <p>TVL-ICT</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section stack-section" id="stack" aria-labelledby="stack-title">
+                <div class="section-heading section-heading-row">
+                    <h3 id="stack-title">[ 03 // Stack ]</h3>
+                    <span class="section-link">technologies</span>
+                </div>
+
+                <div class="stack-groups">
+                    <div class="stack-group">
+                        <h4>// Languages</h4>
+                        <div class="chip-grid">
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>C#</span>
+                            <span>SQL</span>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-group">
+                        <h4>// Database</h4>
+                        <div class="chip-grid">
+                            <span>Microsoft SQL Server</span>
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
+                            <span>Oracle SQL Developer</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-group">
+                        <h4>// Tools</h4>
+                        <div class="chip-grid">
+                            <span>Git</span>
+                            <span>Postman</span>
+                            <span>Github</span>
+                            <span>Visual Studio Code</span>
+                            <span>Visual Studio</span>
+                            <span>IntelliJ</span>
+                            <span>Android Studio</span>
+                            <span>Antigravity</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-group">
+                        <h4>// AI and Automation</h4>
+                        <div class="chip-grid">
+                            <span>Codex</span>
+                            <span>Opencode</span>
+                            <span>Openclaw</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="content-section projects-section" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading section-heading-row">
+                <h3 id="projects-title">[ SECTION 04 // Projects ]</h3>
+                <span class="section-link">Featured work</span>
+            </div>
+
+            <div class="project-index" aria-label="Project index">
+                <span class="project-index-number">01</span>
+                <span class="project-index-title">Netflix Analytics</span>
+                <span class="project-index-type">Data dashboard</span>
+            </div>
+
+            <article class="project-feature">
+                <div class="project-preview">
+                    <img src="./assets/project.jpg" alt="Netflix Analytics dashboard project preview"
+                        class="project-image" />
+                </div>
+
+                <div class="project-details">
+                    <p class="project-kicker">Featured project / Python + Django / 2025</p>
+                    <h4>Netflix Analytics</h4>
+                    <p class="project-summary">A Django web application that transforms the Netflix catalog into an
+                        interactive analytics dashboard, combining cleaned dataset ingestion, searchable records, and
+                        dynamic visual insights.</p>
+
+                    <div class="project-meta">
+                        <div>
+                            <span class="meta-label">Tech stack</span>
+                            <strong>Django, Pandas, Matplotlib, SQLite</strong>
+                        </div>
+                        <div>
+                            <span class="meta-label">Key highlights</span>
+                            <strong>ETL, CRUD, Charts</strong>
+                        </div>
+                        <div>
+                            <span class="meta-label">Status</span>
+                            <strong>Completed</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-section photos-section" id="photos" aria-labelledby="photos-title">
+            <div class="section-heading section-heading-row">
+                <h3 id="photos-title">[ 05 // GALLERY ]</h3>
+                <span class="section-link">Visual archive</span>
+            </div>
+
+            <div class="photo-grid">
+                <article class="photo-placeholder">
+                    <img class="gallery-image" src="./assets/image 1.jpg"
+                        alt="Lance with a close friend at a programming milestone" />
+                    <span>01</span>
+                    <p>"With the friend who guided me through my first steps in programming."</p>
+                </article>
+                <article class="photo-placeholder">
+                    <img class="gallery-image" src="./assets/image 2.jpg"
+                        alt="Graduating classmates standing together outdoors" />
+                    <span>02</span>
+                    <p>"Celebrating graduation with my classmates and the people who made the journey memorable."</p>
+                </article>
+                <article class="photo-placeholder">
+                    <img class="gallery-image" src="./assets/image 3.jpg"
+                        alt="Lance with friends from senior high school" />
+                    <span>03</span>
+                    <p>"With the friends I made during senior high school."</p>
+                </article>
             </div>
         </section>
 
-        <!-- Featured / Spotlight Spotlight Card -->
-        <section class="featured-section">
-            <div class="moon-card">
-                <div class="moon-gif-wrap">
-                    <img src="./assets/moon.gif" alt="Moon animation" class="moon-gif" />
-                </div>
-                <div class="moon-info-row">
-                    <!-- <p class="moon-title">月がきれい</p> -->
-                    <p class="moon-subtitle">"The moon is beautiful"</p>
-                </div>
-            </div>
-        </section>
+        <footer class="site-footer">
+            <p class="copyright">&copy; 2026 Lance Mirano. All rights reserved.</p>
+            <a class="back-to-top" href="#home">Back to top <span aria-hidden="true">&#8593;</span></a>
+        </footer>
     </main>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
