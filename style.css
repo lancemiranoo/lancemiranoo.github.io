@@ -198,6 +198,10 @@ body.is-loading main {
     opacity: 0;
 }
 
+html.portfolio-ready main {
+    opacity: 1;
+}
+
 html.skip-loading body.is-loading {
     overflow: auto;
 }

@@ -44,6 +44,7 @@ const dismissLoadingScreen = () => {
         loadingScreen.classList.add("is-complete");
         loadingScreen.setAttribute("aria-hidden", "true");
         document.body.classList.remove("is-loading");
+        document.documentElement.classList.add("portfolio-ready");
         window.setTimeout(() => {
             loadingScreen.style.backgroundImage = "none";
             loadingScreen.replaceChildren();
@@ -58,6 +59,7 @@ if (loadingScreen && isReturningFromExperience) {
     window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
             document.body.classList.remove("is-loading");
+            document.documentElement.classList.add("portfolio-ready");
         });
     });
 } else if (loadingScreen) {
